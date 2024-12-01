@@ -1,4 +1,4 @@
-package assignment06MEM.assignment06MEM;
+package assignment06MEM;
 
 import java.awt.Color;
 import java.util.Map;

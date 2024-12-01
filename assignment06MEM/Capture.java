@@ -1,6 +1,6 @@
-package assignment06MEM.assignment06MEM;
+package assignment06MEM;
 
-import assignment06.assignment06Memento.Memento;
+import assignment06Memento.Memento;
 
 public class Capture implements Command {
 	int iccf;
