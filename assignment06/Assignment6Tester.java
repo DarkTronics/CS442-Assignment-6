@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import assignment06MEM.assignment06MEM.ChessBoard;
+import assignment06MEM.ChessBoard;
 
 // https://en.wikipedia.org/wiki/Algebraic_notation_(chess)
 // https://en.wikipedia.org/wiki/ICCF_numeric_notation
