@@ -5,16 +5,16 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.TreeMap;
 
-import assignment06.TODO;
-import assignment06.by;
-import assignment06.command;
-import assignment06.get;
-import assignment06.is;
-import assignment06.no;
-import assignment06.size;
-import assignment06.the;
-import assignment06.then;
-import assignment06.there;
+// import assignment06.TODO;
+// import assignment06.by;
+// import assignment06.command;
+// import assignment06.get;
+// import assignment06.is;
+// import assignment06.no;
+// import assignment06.size;
+// import assignment06.the;
+// import assignment06.then;
+// import assignment06.there;
 import assignment06Memento.Memento;
 import assignment06Memento.Originator;
 
@@ -109,31 +109,31 @@ public class Board {
 	}
 
 	public void doNewCommand(Command cm) {
-		TODO
-		clear the undone stack
-		push the command on to the executed stack
-		get the Memento object returned by executing the command
-		push that Memento object onto the memento stack
-		(Note the last 2 lines can be combined into one instruction)
+		// TODO
+		// clear the undone stack
+		// push the command on to the executed stack
+		// get the Memento object returned by executing the command
+		// push that Memento object onto the memento stack
+		// (Note the last 2 lines can be combined into one instruction)
 	}
 	
 	public void undoCommand() {
-		TODO
-		if the executed stack size is positive
-		get the command by popping the executed stack, then
-		get the memento "mem" by popping the memento stack, then
-		push this command on to the undone stack, then
-		call the reset method of originator with arguments (this, mem) 
-		(there is no code if the executed stack is empty)
+		// TODO
+		// if the executed stack size is positive
+		// get the command by popping the executed stack, then
+		// get the memento "mem" by popping the memento stack, then
+		// push this command on to the undone stack, then
+		// call the reset method of originator with arguments (this, mem) 
+		// (there is no code if the executed stack is empty)
 	}
 	public void redoCommand() {
-		TODO
-		if the undone stack size is positive
-		get the command by popping the stack, then
-		push this command on to the executed stack, then
-		get the Memento object returned by executing the command
-		push that Memento object onto the memento stack
-		(Note the last 2 lines can be combined into one instruction)
-		(there is no code if the executed stack is empty)
+		// TODO
+		// if the undone stack size is positive
+		// get the command by popping the stack, then
+		// push this command on to the executed stack, then
+		// get the Memento object returned by executing the command
+		// push that Memento object onto the memento stack
+		// (Note the last 2 lines can be combined into one instruction)
+		// (there is no code if the executed stack is empty)
 	}
 }
