@@ -23,5 +23,11 @@ public class Move implements Command {
 	public void undo() {
 		// use the undoICCF to move the piece back where it came from.
 		// and replace where it was with a non-piece.
+		int from = undoICCF / 100; // Original position
+		int to = undoICCF % 100;   // Current position
+		
+		Piece p = board.getPiece(to); // Get the piece currently on the "to" square
+		board.setPiece(to, board.piece.get("--")); // Replace it with a non-piece
+		board.setPiece(from, p); // Put the piece back on the "from" square
 	}
 }
