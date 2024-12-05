@@ -13,5 +13,7 @@ public class Originator {
 		// board.setPiece(GET THE TO LOCATION* from mmem, GET THE TO PIECE from mmem);
 		// *NOTE the LOCATION will be 2 digits using the ICCF notation--the LOCATIONS
 		// are split from the iccf in mmem using from = iccf/100 and to = iccf%100
+		board.setPiece(mmem.getIccf()/100, mmem.getFromPiece());
+		board.setPiece(mmem.getIccf()%100, mmem.getToPiece());
 	}
 }

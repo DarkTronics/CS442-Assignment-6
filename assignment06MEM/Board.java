@@ -115,6 +115,9 @@ public class Board {
 		// get the Memento object returned by executing the command
 		// push that Memento object onto the memento stack
 		// (Note the last 2 lines can be combined into one instruction)
+		undoneStack.clear();
+		executedStack.push(cm);
+		mementoStack.push(cm.execute());
 	}
 	
 	public void undoCommand() {
@@ -125,6 +128,12 @@ public class Board {
 		// push this command on to the undone stack, then
 		// call the reset method of originator with arguments (this, mem) 
 		// (there is no code if the executed stack is empty)
+		if(executedStack.size() > 0)
+		{
+			undoneStack.push(executedStack.pop());
+			Memento mem = mementoStack.pop();
+			originator.reset(this, mem);
+		}
 	}
 	public void redoCommand() {
 		// TODO
@@ -135,5 +144,11 @@ public class Board {
 		// push that Memento object onto the memento stack
 		// (Note the last 2 lines can be combined into one instruction)
 		// (there is no code if the executed stack is empty)
+		if(undoneStack.size() > 0)
+		{
+			Command cm = undoneStack.pop();
+			executedStack.push(cm);
+			mementoStack.push(cm.execute());
+		}
 	}
 }
